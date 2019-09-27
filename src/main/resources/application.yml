@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    db1:
+      driverClassName: com.mysql.jdbc.Driver
+      username: root
+      password: root
+      # spring2.0此处为jdbc-url
+      jdbc-url: jdbc:mysql://localhost:3307/dbtest?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+      type: com.alibaba.druid.pool.DruidDataSource
+    db2:
+      driverClassName: oracle.jdbc.driver.OracleDriver
+      username: jyzx
+      password: jyzx
+      # spring2.0此处为jdbc-url
+      jdbc-url: jdbc:oracle:thin:@localhost:1521:orcl
+      max-active: 10
+      max-idle: 5
+      min-idle: 2
+      initial-size: 6
+      validation-query: select 1 from dual
+      test-while-idle: true
+
